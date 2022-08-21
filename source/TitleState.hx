@@ -676,6 +676,8 @@ class TitleState extends MusicBeatState
 					addMoreText('Shadow Mario', 15);
 					addMoreText('RiverOaken', 15);
 					addMoreText('shubs', 15);
+                                        addMoreText('bb-panzu', 15);
+                                        addMoreText('DaffyToons', 15);
 					#else
 					addMoreText('present');
 					#end
