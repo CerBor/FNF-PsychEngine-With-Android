@@ -98,8 +98,7 @@ class TitleState extends MusicBeatState
 		#if LUA_ALLOWED
 		Paths.pushGlobalMods();
 		#end
-		// Just to load a mod on start up if ya got one. For mods that change the menu music and bg
-		WeekData.loadTheFirstEnabledMod();
+		
 
 		//trace(path, FileSystem.exists(path));
 
@@ -722,7 +721,7 @@ class TitleState extends MusicBeatState
 					addMoreText('Night');
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Funkin For Android'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
