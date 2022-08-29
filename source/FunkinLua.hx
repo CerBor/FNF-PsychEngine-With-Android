@@ -197,7 +197,9 @@ class FunkinLua {
 		set('ghostTapping', ClientPrefs.ghostTapping);
 		set('instantRespawn', ClientPrefs.instantRespawn);
 		set('hideHud', ClientPrefs.hideHud);
+		set('showcaseMode', ClientPrefs.showcaseMode);
 		set('timeBarType', ClientPrefs.timeBarType);
+		set('iconBounce', ClientPrefs.iconBounce);
 		set('scoreZoom', ClientPrefs.scoreZoom);
 		set('cameraZoomOnBeat', ClientPrefs.camZooms);
 		set('flashingLights', ClientPrefs.flashing);
