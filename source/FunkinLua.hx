@@ -1781,6 +1781,18 @@ class FunkinLua {
 				object.makeGraphic(width, height, colorNum);
 			}
 		});
+		Lua_helper.add_callback(lua, "getAnimations", function(obj:String) {
+			if(PlayState.instance.getLuaObject(obj, false) != null) {
+				var cock:FlxSprite = PlayState.instance.getLuaObject(obj, false);
+				return getAnimations(cock);
+			}
+
+			var cock:FlxSprite = Reflect.getProperty(getInstance(), obj);
+			if (cock != null) {
+				return getAnimations(cock);
+			}
+			return [];
+		});
 		Lua_helper.add_callback(lua, "addAnimationByPrefix", function(obj:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true) {
 			if(PlayState.instance.getLuaObject(obj,false)!=null) {
 				var cock:FlxSprite = PlayState.instance.getLuaObject(obj,false);
@@ -2871,6 +2883,16 @@ class FunkinLua {
 			return shader;
 		}
 		return null;
+	}
+			
+	public function getAnimations(cock:FlxSprite):Array<String>
+	{
+		var animations:Array<String> = [];
+		@:privateAccess
+		for (a in cock.animation._animations.keys()) {
+			animations.push(a);
+		}
+		return animations;
 	}
 	
 	function initLuaShader(name:String, ?glslVersion:Int = 120)
