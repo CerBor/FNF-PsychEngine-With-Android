@@ -48,7 +48,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			false);
 		addOption(option);
 		
-		var option:Option = new Option("Showcase Mode",
+		var option:Option = new Option("Showcase Mode", // From Theoyeah-Engine
 			'If checked, hides entire HUD and enables botplay :D',
 			'showcaseMode',
 			'bool',
